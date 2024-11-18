@@ -95,43 +95,43 @@ Game.on("playerJoin", async(player) => {
         player.setScore(player.data.listened)
         switch (player.data.listened) {
             case 1:
-                p.grantBadge(19)
+                player.grantBadge(19)
                 player.message("\\c9>\\c5>\\c8> \\c7YOU GOT A BADGE!!!!!! \\c8<\\c5<\\c9<")
                 player.message("\\c9>\\c5>\\c8> \\c7check ur badge inventory bucko \\c8<\\c5<\\c9<")
             case 10:
-                p.grantBadge(20)
+                player.grantBadge(20)
                 player.message("\\c9>\\c5>\\c8> \\c7YOU GOT A BADGE!!!!!! \\c8<\\c5<\\c9<")
                 player.message("\\c9>\\c5>\\c8> \\c7check ur badge inventory bucko \\c8<\\c5<\\c9<")
             case 50:
-                p.grantBadge(21)
+                player.grantBadge(21)
                 player.message("\\c9>\\c5>\\c8> \\c7YOU GOT A BADGE!!!!!! \\c8<\\c5<\\c9<")
                 player.message("\\c9>\\c5>\\c8> \\c7check ur badge inventory bucko \\c8<\\c5<\\c9<")
             case 100:
-                p.grantBadge(30)
+                player.grantBadge(30)
                 player.message("\\c9>\\c5>\\c8> \\c7YOU GOT A BADGE!!!!!! \\c8<\\c5<\\c9<")
                 player.message("\\c9>\\c5>\\c8> \\c7check ur badge inventory bucko \\c8<\\c5<\\c9<")
             case 500:
-                p.grantBadge(31)
+                player.grantBadge(31)
                 player.message("\\c9>\\c5>\\c8> \\c7YOU GOT A BADGE!!!!!! \\c8<\\c5<\\c9<")
                 player.message("\\c9>\\c5>\\c8> \\c7check ur badge inventory bucko \\c8<\\c5<\\c9<")
             case 1000:
-                p.grantBadge(32)
+                player.grantBadge(32)
                 player.message("\\c9>\\c5>\\c8> \\c7YOU GOT A BADGE!!!!!! \\c8<\\c5<\\c9<")
                 player.message("\\c9>\\c5>\\c8> \\c7check ur badge inventory bucko \\c8<\\c5<\\c9<")
             case 2500:
-                p.grantBadge(33)
+                player.grantBadge(33)
                 player.message("\\c9>\\c5>\\c8> \\c7YOU GOT A BADGE!!!!!! \\c8<\\c5<\\c9<")
                 player.message("\\c9>\\c5>\\c8> \\c7check ur badge inventory bucko \\c8<\\c5<\\c9<")
             case 5000:
-                p.grantBadge(34)
+                player.grantBadge(34)
                 player.message("\\c9>\\c5>\\c8> \\c7YOU GOT A BADGE!!!!!! \\c8<\\c5<\\c9<")
                 player.message("\\c9>\\c5>\\c8> \\c7check ur badge inventory bucko \\c8<\\c5<\\c9<")
             case 7500:
-                p.grantBadge(35)
+                player.grantBadge(35)
                 player.message("\\c9>\\c5>\\c8> \\c7YOU GOT A BADGE!!!!!! \\c8<\\c5<\\c9<")
                 player.message("\\c9>\\c5>\\c8> \\c7check ur badge inventory bucko \\c8<\\c5<\\c9<")
             case 10000:
-                p.grantBadge(36)
+                player.grantBadge(36)
                 player.message("\\c9>\\c5>\\c8> \\c7YOU GOT A BADGE!!!!!! \\c8<\\c5<\\c9<")
                 player.message("\\c9>\\c5>\\c8> \\c7check ur badge inventory bucko \\c8<\\c5<\\c9<")
         }
