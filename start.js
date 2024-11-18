@@ -9,6 +9,6 @@ nh.startServer({
     map: "map.brk",
     scripts: "./user_scripts",
     modules: [
-        //"mongoose"
+        "mongoose"
     ]
 })
