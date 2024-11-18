@@ -14,7 +14,7 @@ const playerSchema = new mongoose.Schema({
 const Player = mongoose.model("Player", playerSchema)
 
 connect = async() => {
-    log("\x1b[36mplayer_data.js", "connect", "Attempting to establish connection with MongoDB...", 1)
+    console.log("Attempting to establish connection with MongoDB...")
     mongoose.connect("mongodb+srv://yekware:GRkpLPA7f8o0fq7p@savedata1.mhvce.mongodb.net/?retryWrites=true&w=majority&appName=savedata1")
     .then(() => console.log("CONNECTED TO DATABASE!"))
     .catch(error => console.log(`FAILED TO CONNECT TO DATABASE: ${error}`))
