@@ -59,17 +59,16 @@ setInterval(() => {
 
 Game.on("playerJoin", async(player) => {
     //Look for player's data in the database
-    /*let playerData = await Player.findOne({ userId: player.userId }).catch((error) => {
+    let playerData = await Player.findOne({ userId: player.userId }).catch((error) => {
         player.kick(`Something went wrong when retreiving your listen count: ${error}`)
         console.log(`Failed to retreive player data for ${player.username} (${player.userId})`)
-    })*/
+    })
 
-    /*
     if (playerData) {
         //Player has data saved
         player.data = playerData
         console.log(`Loaded player data for ${player.username} (${player.userId}) (#${player.data.listened})`)
-    } else {*/
+    } else {
         //New player
         let playerData = new Player()
         playerData.userId = player.userId
@@ -77,7 +76,7 @@ Game.on("playerJoin", async(player) => {
         await playerData.save()
         player.data = playerData
         console.log(`Created player data for ${player.username} (${player.userId}) (#0)`)
-    //}
+    }
 
     player.setScore(player.data.listened)
 
@@ -140,15 +139,10 @@ Game.on("playerJoin", async(player) => {
         player.topPrint("\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<", 5)
         player.centerPrint("\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<", 5)
         player.bottomPrint("\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<", 5)
+        
+        save(player)
     }, 172000)
 })
-
-
-setInterval(() => {
-    Game.players.forEach((player) => {
-        save(player)
-    })
-}, 172000)
 
 Game.on("playerLeave", (player) => {
     save(player)
