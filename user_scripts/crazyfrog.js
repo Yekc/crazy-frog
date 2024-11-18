@@ -92,7 +92,7 @@ Game.on("playerJoin", async(player) => {
 
     player.setInterval(() => {
         player.data.listened++
-        console.log(player.data.listened)
+        console.log(player.data)
         player.setScore(player.data.listened)
         switch (player.data.listened) {
             case 1:
