@@ -92,6 +92,7 @@ Game.on("playerJoin", async(player) => {
 
     player.setInterval(() => {
         player.data.listened++
+        console.log(player.data.listened)
         player.setScore(player.data.listened)
         switch (player.data.listened) {
             case 1:
@@ -139,7 +140,7 @@ Game.on("playerJoin", async(player) => {
         player.topPrint("\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<", 5)
         player.centerPrint("\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<", 5)
         player.bottomPrint("\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<#\\c9>\\c5>\\c8> \\c7CONGRATS! YOU GOT 1 POINT! \\c8<\\c5<\\c9<", 5)
-    }, 172000)
+    }, 17200)
 })
 
 
